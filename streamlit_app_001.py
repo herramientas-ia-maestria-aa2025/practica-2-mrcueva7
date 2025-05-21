@@ -2,12 +2,18 @@ import streamlit as st
 import mlflow.sklearn
 import numpy as np
 
-st.title("Predicción de Diabetes")
+st.title("Predicción de Diabetes - Marlon Cueva")
 
 # Configurar conexión con MLflow Tracking Server
+
+mlflow.set_tracking_uri("http://localhost:9090")
+
 pass
 
 # Cargar modelo desde el Model Registry, revise el ejemplo de flask
+
+model = mlflow.sklearn.load_model("models:/ModeloDiabetesMC/3")
+
 pass
 
 # Deslizadores para cada input del modelo
